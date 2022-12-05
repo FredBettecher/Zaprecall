@@ -32,7 +32,7 @@ export default function Card(props) {
 
     if(selectCard === 0) {
         return(
-            <CardStyle data-identifier="flashcard">
+            <CardStyle data-identifier="flashcard" data-test="flashcard">
                 <p data-test="flashcard-text">Pergunta {props.index+1}</p>
                 <img alt="play" src={"./assets/img/seta_play.png"} onClick={play} data-test="play-btn"></img>
             </CardStyle>
@@ -41,7 +41,7 @@ export default function Card(props) {
 
     if(selectCard === 1) {
         return(
-            <CardSelected data-identifier="flashcard">
+            <CardSelected data-identifier="flashcard" data-test="flashcard">
                 <p data-test="flashcard-text">{text}</p>
                 <img alt="virar" className="turn-button" src={"./assets/img/seta_virar.svg"} onClick={turn} data-test="turn-btn"></img>
             </CardSelected>
@@ -50,7 +50,7 @@ export default function Card(props) {
 
     if(selectCard === 2) {
         return(
-            <CardTurned data-identifier="flashcard">
+            <CardTurned data-identifier="flashcard" data-test="flashcard">
                 <p data-test="flashcard-text">{text}</p>
                 <div className="options">
                     <div className="not-remember" onClick={notRemember} data-test="no-btn">Não lembrei</div>
@@ -63,7 +63,7 @@ export default function Card(props) {
 
     if(selectCard === 3) {
         return(
-            <NotRemember data-identifier="flashcard">
+            <NotRemember data-identifier="flashcard" data-test="flashcard">
                 <p data-test="flashcard-text">Pergunta {props.index+1}</p>
                 <img alt="play" src={"./assets/img/icone_erro.png"} data-test="no-icon"></img>
             </NotRemember>
@@ -72,7 +72,7 @@ export default function Card(props) {
 
     if(selectCard === 4) {
         return(
-            <AlmostRemember data-identifier="flashcard">
+            <AlmostRemember data-identifier="flashcard" data-test="flashcard">
                 <p data-test="flashcard-text">Pergunta {props.index+1}</p>
                 <img alt="play" src={"./assets/img/icone_quase.png"} data-test="partial-icon"></img>
             </AlmostRemember>
@@ -81,7 +81,7 @@ export default function Card(props) {
 
     if(selectCard === 5) {
         return(
-            <Zap data-identifier="flashcard">
+            <Zap data-identifier="flashcard" data-test="flashcard">
                 <p data-test="flashcard-text">Pergunta {props.index+1}</p>
                 <img alt="play" src={"./assets/img/icone_certo.png"} data-test="zap-icon"></img>
             </Zap>
