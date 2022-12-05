@@ -12,11 +12,12 @@ export const CardStyle = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    h1  {
+    p  {
         margin-left: 0.9rem;
         font-family: "Recursive";
         font-size: 1rem;
         font-weight: bold;
+        color: #333333;
     }
 
     img {
@@ -93,6 +94,7 @@ export const CardTurned = styled.div`
         padding: 0 1rem;
         border: 1px transparent;
         border-radius: 5px;
+        cursor: pointer;
     }
 
     .almost-remember {
@@ -104,6 +106,7 @@ export const CardTurned = styled.div`
         height: 2rem;
         border: 1px transparent;
         border-radius: 5px;
+        cursor: pointer;
     }
 
     .zap {
@@ -115,5 +118,84 @@ export const CardTurned = styled.div`
         height: 2rem;
         border: 1px transparent;
         border-radius: 5px;
+        cursor: pointer;
+    }
+`;
+
+export const NotRemember = styled.div`
+    margin-top: 3rem;
+    display: flex;
+    border: 1px solid #FFFFFF;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    width: 18.75rem;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        margin-left: 0.9rem;
+        font-family: "Recursive";
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: line-through;
+        color: #FF3030;
+    }
+
+    img {
+        margin-right: 0.9rem;
+    }
+`;
+
+export const AlmostRemember = styled.div`
+    margin-top: 3rem;
+    display: flex;
+    border: 1px solid #FFFFFF;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    width: 18.75rem;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        margin-left: 0.9rem;
+        font-family: "Recursive";
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: line-through;
+        color: #FF922E;
+    }
+
+    img {
+        margin-right: 0.9rem;
+    }
+`;
+
+export const Zap = styled.div`
+    margin-top: 3rem;
+    display: flex;
+    border: 1px solid #FFFFFF;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    width: 18.75rem;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        margin-left: 0.9rem;
+        font-family: "Recursive";
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: line-through;
+        color: #2FBE34;
+    }
+
+    img {
+        margin-right: 0.9rem;
     }
 `;

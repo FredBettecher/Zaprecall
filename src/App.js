@@ -25,7 +25,7 @@ function App() {
       <Logo />
 
       <div className="space">
-      <Cards cards={cards}/>
+      <Cards cards={cards} counter={counter} setCounter={setCounter}/>
       </div>
       
       <Footer counter={counter} cards={cards}/>

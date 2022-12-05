@@ -5,7 +5,7 @@ export default function Cards(props) {
         <>
         {props.cards.map((card, index) => {
             return (
-            <Card index={index} card={card}/>
+            <Card index={index} card={card} counter={props.counter} setCounter={props.setCounter}/>
             )
         })}
     </>
