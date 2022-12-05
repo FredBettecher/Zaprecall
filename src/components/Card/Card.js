@@ -1,22 +1,21 @@
 import { CardSelected, CardStyle, CardTurned } from "./CardStyle";
-// import iconRight from "./assets/img/icone_certo.png";
-// import iconWrong from "./assets/img/icone_erro.png";
 import { useState } from "react";
 
 export default function Card(props) {
-    const [selectCard, setSelectCard] = useState(false);
-    const [turnCard, setTurnCard] = useState(false);
+    const [selectCard, setSelectCard] = useState(0);
+    const [text, setText] = useState(props.card.question);
 
     function play(){
-        setSelectCard(true);
+        setText(props.card.question);
+        setSelectCard(1);
     }
 
     function turn(){
-        setTurnCard(true);
-        alert("virou")
+        setText(props.card.answer);
+        setSelectCard(2);
     }
 
-    if(selectCard === false) {
+    if(selectCard === 0) {
         return(
             <CardStyle>
                 <h1>Pergunta {props.index+1}</h1>
@@ -25,20 +24,25 @@ export default function Card(props) {
         );
     }
 
-    if(selectCard === true){
+    if(selectCard === 1){
         return(
             <CardSelected>
-                <p>{props.card.question}</p>
-                <img alt="virar" src={"./assets/img/seta_virar.svg"} onClick={(turn)}></img>
+                <p>{text}</p>
+                <img alt="virar" className="turn-button" src={"./assets/img/seta_virar.svg"} onClick={turn}></img>
             </CardSelected>
         );
     }
 
-    if(turnCard === true){
+    if(selectCard === 2){
         return(
-            <CardSelected>
-                <p>{props.card.answer}</p>
-            </CardSelected>
+            <CardTurned>
+                <p>{text}</p>
+                <div className="options">
+                    <div className="not-remember">Não lembrei</div>
+                    <div className="almost-remember">Quase não lembrei</div>
+                    <div className="zap">Zap!</div> 
+                </div>
+            </CardTurned>
         );
     }
 }
